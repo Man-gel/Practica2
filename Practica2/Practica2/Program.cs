@@ -22,6 +22,7 @@ namespace Practica2
 		private static double precio2 = 0;
 		private static double precio3 = 0;
 		
+		
 		public  static int asignarCantidad()
 		{
 			Console.WriteLine();
@@ -45,6 +46,31 @@ namespace Practica2
 			return precio; 
 		}
 		
+		public static void mostrarNota()
+		{
+		double subtotal1 = cantidad1*precio1;
+		double subtotal2 = cantidad2*precio2;
+		double subtotal3 = cantidad3*precio3; 
+			Console.WriteLine("CANTIDAD DESCRIPCION     PRECIO ");
+			Console.WriteLine();
+			Console.WriteLine(" "+cantidad1+"    "+descripcion1+"      "+subtotal1);
+			Console.WriteLine(" "+cantidad2+"    "+descripcion2+"      "+subtotal2);
+			Console.WriteLine(" "+cantidad3+"    "+descripcion3+"      "+subtotal3);
+			calcularIVA(subtotal1,subtotal2,subtotal3);
+			Console.ReadKey(true);
+		}
+		
+		private static void calcularIVA(double subt1,double subt2,double subt3)
+		{
+			double subTotal = subt1+subt2+subt3;
+			double iva = subTotal * 0.16;
+			double total = subTotal + iva;
+			Console.WriteLine("SUBTOTAL: "+ subTotal);
+			Console.WriteLine("IVA: "+ iva);
+			Console.WriteLine("TOTAL: "+ total);
+			
+		}
+		
 		
 		
 		public static void Main(string[] args)
@@ -58,6 +84,7 @@ namespace Practica2
 			cantidad3 = asignarCantidad();
 			descripcion3 = asignarDescripcion();
 			precio3 = asignarPrecio();
+			mostrarNota();
 			
 			//Console.WriteLine("Prd1: "+descripcion1+" cant: "+cantidad1+" Precio: "+precio1);
 			//Console.WriteLine("Prd2: "+descripcion2+" cant: "+cantidad2+" Precio: "+precio2);
