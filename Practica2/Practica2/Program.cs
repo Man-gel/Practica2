@@ -12,14 +12,26 @@ namespace Practica2
 {
 	class Program
 	{
+		private static int cantidad1  = 0;
+		private static int cantidad2  = 0;
+		private static int cantidad3  = 0;
+		
+		public  static int asignarCantidad()
+		{
+			Console.WriteLine("Ingresa la cantidad del producto:");
+			int cantidad = Int32.Parse( Console.ReadLine()  );
+			return cantidad; 
+		}
+		
+		
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			cantidad1 = asignarCantidad();
+			cantidad2 = asignarCantidad();
+			cantidad3 = asignarCantidad();
+			//Console.WriteLine("c1: "+cantidad1+" c2: "+cantidad2+" c3: "+cantidad3);
+			//Console.ReadKey(true);
 			
-			// TODO: Implement Functionality Here
-			
-			Console.Write("Press any key to continue . . . ");
-			Console.ReadKey(true);
 		}
 	}
 }
