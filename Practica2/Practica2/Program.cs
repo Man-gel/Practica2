@@ -15,6 +15,10 @@ namespace Practica2
 		private static int cantidad1  = 0;
 		private static int cantidad2  = 0;
 		private static int cantidad3  = 0;
+		private static string descripcion1 = "";
+		private static string descripcion2 = "";
+		private static string descripcion3 = "";
+		
 		
 		public  static int asignarCantidad()
 		{
@@ -23,14 +27,26 @@ namespace Practica2
 			return cantidad; 
 		}
 		
+		public  static string asignarDescripcion()
+		{
+			Console.WriteLine("Ingresa la descripcion del producto:");
+			string descripcion = Console.ReadLine();
+			return descripcion; 
+		}
+		
+		
 		
 		public static void Main(string[] args)
 		{
 			cantidad1 = asignarCantidad();
+			descripcion1 = asignarDescripcion();
 			cantidad2 = asignarCantidad();
+			descripcion2 = asignarDescripcion();
 			cantidad3 = asignarCantidad();
+			descripcion3 = asignarDescripcion();
+			Console.WriteLine("d1: "+descripcion1+" d2: "+descripcion2+" d3: "+descripcion3);
 			//Console.WriteLine("c1: "+cantidad1+" c2: "+cantidad2+" c3: "+cantidad3);
-			//Console.ReadKey(true);
+			Console.ReadKey(true);
 			
 		}
 	}
